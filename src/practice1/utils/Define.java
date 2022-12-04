@@ -1,4 +1,4 @@
-package utils;
+package practice1.utils;
 
 public class Define {
 	public static final int KOREA = 1001;

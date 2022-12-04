@@ -1,4 +1,4 @@
-package school;
+package practice1.school;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,8 @@
-package school;
+package practice1.school;
 
 import java.util.ArrayList;
 
-import utils.Define;
+import practice1.utils.Define;
 
 public class Subject {
 	private String subjectName;

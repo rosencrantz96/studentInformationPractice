@@ -1,8 +1,8 @@
-package application;
+package practice1.application;
 
-import school.*;
-import school.report.GenerateGradeReport;
-import utils.Define;
+import practice1.school.*;
+import practice1.school.report.GenerateGradeReport;
+import practice1.utils.Define;
 
 public class StudentInfoApplication {
 	School goodSchool = School.getInstance();
@@ -20,7 +20,7 @@ public class StudentInfoApplication {
 		System.out.println(report);
 	}
 
-	public void createStudent() {
+	public void createSubject() {
 		korean = new Subject("국어", Define.KOREA);
 		math = new Subject("수학", Define.MATH);
 		
@@ -28,7 +28,7 @@ public class StudentInfoApplication {
 		goodSchool.addSubject(math);
 	}
 
-	public void createSubject() {
+	public void createStudent() {
 		Student student1 = new Student(181213, "박지은", korean);
 		Student student2 = new Student(181518, "차슬기", math);
 		Student student3 = new Student(171230, "이현욱", korean);

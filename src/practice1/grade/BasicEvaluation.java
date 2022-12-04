@@ -1,4 +1,4 @@
-package grade;
+package practice1.grade;
 
 public class BasicEvaluation implements GradeEvaluation {
 

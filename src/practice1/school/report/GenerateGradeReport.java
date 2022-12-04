@@ -1,10 +1,10 @@
-package school.report;
+package practice1.school.report;
 
 import java.util.ArrayList;
 
-import grade.*;
-import school.*;
-import utils.Define;
+import practice1.grade.*;
+import practice1.school.*;
+import practice1.utils.Define;
 
 public class GenerateGradeReport {
 	School school = School.getInstance();
