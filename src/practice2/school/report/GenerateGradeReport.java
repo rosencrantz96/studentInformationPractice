@@ -11,7 +11,7 @@ public class GenerateGradeReport {
 	School school = School.getInstance(); // school 싱글톤 객체 생성
 	
 	public static final String TITLE = "수강생 학점 \t\n";
-	public static final String HEADER = "이름 | 학번 | 필수과목 | 점수 \n";
+	public static final String HEADER = "이름 | 학번 | 필수과목 | 점수 | \n";
 	public static final String LINE = "-----------------------------\n";
 	private StringBuffer buffer = new StringBuffer();
 	
@@ -44,7 +44,9 @@ public class GenerateGradeReport {
 			Student student = studentList.get(i); // student에 배열에서 하나씩 학생을 꺼내온다 
 			buffer.append(student.getStudentName()); // 학생 이름을 찍고
 			buffer.append("|"); // 구분선 찍어주기
-			buffer.append(student.getMajorSubject().getSubjectName() + "\t"); // 필수 과목을 찍고 
+			buffer.append(student.getStudentId());
+			buffer.append("|"); // 구분선 찍어주기
+			buffer.append(student.getMajorSubject().getSubjectName()); // 필수 과목을 찍고 
 			buffer.append("|"); // 구분선 찍고 
 			// 학생의 점수와 학점을 찍어줘야 함! 메소드 하나 새로 만들기
 			getScoreGrade(student, subject.getSubjectId());
@@ -72,7 +74,7 @@ public class GenerateGradeReport {
 					grade = gradeEvaluation[Define.AB_TYPE].getGrade(score.getPoint());
 				}
 				
-				buffer.append(score); // 점수를 찍고
+				buffer.append(score.getPoint()); // 점수를 찍고
 				buffer.append(":"); // 콜론을 찍고
 				buffer.append(grade); // 학점을 찍고
 				buffer.append("|"); // 구분선을 찍어준다. 

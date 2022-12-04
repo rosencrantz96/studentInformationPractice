@@ -45,7 +45,7 @@ public class GenerateGradeReport {
 			buffer.append("|");
 			buffer.append(student.getMajorSubject().getSubjectName());
 			buffer.append("|");
-			getScoreGrade(student, subject.getSubjectId());
+//			getScoreGrade(student, subject.getSubjectId());
 			
 			getScoreGrade(student, subject.getSubjectId());
 			buffer.append("\n");
